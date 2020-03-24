@@ -206,7 +206,7 @@ select {
 
     .login-page,
     .register-page {
-        height: 110vh;
+        height: 100vh;
     }
 
     .content-formulario {
