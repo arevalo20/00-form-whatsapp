@@ -137,7 +137,7 @@ select {
     font-weight: 400;
     /* color: #495057; */
     color: #ffffff;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     background-color: #fff;
     background-clip: padding-box;
     border: 0px;
@@ -204,6 +204,11 @@ select {
 
 @media (min-width: 320px) and (max-width: 480px) {
 
+    .login-page,
+    .register-page {
+        height: 100vh;
+    }
+
     .content-formulario {
         margin: 0px;
         width: 100%;
@@ -212,9 +217,12 @@ select {
     }
 
     .formulario {
-        justify-content: center;
-        align-items: center;
+        /* justify-content: center; */
+        /* align-items: center; */
         /* display: grid; */
+        position: initial;
+        margin: 0;
+        height: 100%;
     }
 
 }
