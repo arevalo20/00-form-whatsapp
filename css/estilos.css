@@ -3,9 +3,29 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.clearfix:after,
+.clearfix:before {
+    content: '';
+    display: table
+}
+
+.clearfix:after {
+    clear: both;
+    display: block
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+
+    /* color: #6a6f8c; */
+    color: #e2e2e2;
+    background: #c8c8c8;
 }
 
 .mb-3,
@@ -25,36 +45,52 @@ body {
 }
 
 .content-formulario {
-    width: 500px;
+    width: 400px;
+    margin: auto;
+    position: relative;
+    background: url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat center;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24),
+        0 17px 50px 0 rgba(0, 0, 0, .19);
 }
 
 .formulario {
     max-width: 100%;
     margin: auto;
-    padding: 20px;
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    /* padding: 40px; */
     position: relative;
+
+    width: 100%;
+    height: 100%;
+    /* background: rgba(255, 0, 0, 0.63); */
+    background: linear-gradient(rgba(255, 0, 0, 0.78), rgba(47, 47, 47, 0.84));
 }
 
-.formulario__titulo,
-.formulario__subtitulo,
-.formulario__parrafo {
+.seccion-titulo {
     text-align: center;
-    margin-top: 0;
 }
 
-.formulario__titulo,
-.formulario__subtitulo {
-    color: rgba(0, 0, 0, 0.7);
+.formulario_titulo {
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
-.formulario__parrafo {
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 1em;
+.formulario_subtitulo {
+    margin-top: 15px;
+    margin-bottom: 0;
 }
 
-.formulario__input,
-.formulario__label {
+.formulario_parrafo {
+    margin-top: 10px;
+}
+
+.img-titulo {
+    width: 90%;
+}
+
+.formulario_input,
+.formulario_label {
     display: block;
     width: 100%;
     font-size: .8em;
@@ -66,7 +102,7 @@ select {
     appearance: none;
 }
 
-.formulario__input {
+.formulario_input {
     padding: 10px;
     background: transparent;
     /* puedo colocar otro color pero con transparencia asi: background: rgba(0, 0, 0, 0.1) porque sino no se ven las label, aunque ya no es necesario porque ya no estan sobre los input y ademas le quite el z-index*/
@@ -75,10 +111,21 @@ select {
     border-radius: 3px;
 }
 
-.formulario__input:focus,
-.form-control:focus{
+.formulario_input:focus,
+.form-control:focus {
     outline: 0;
     border-bottom: 1px solid #1ebea5;
+}
+
+.input-group {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
 }
 
 .form-control {
@@ -88,7 +135,8 @@ select {
     padding: .5rem .5rem;
     font-size: .9rem;
     font-weight: 400;
-    color: #495057;
+    /* color: #495057; */
+    color: #ffffff;
     margin-bottom: 15px;
     background-color: #fff;
     background-clip: padding-box;
@@ -97,19 +145,21 @@ select {
     border-radius: 0rem;
     box-shadow: inset 0 0 0 transparent;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    background: rgba(255, 255, 255, .2);
 }
 
-/*.formulario__input:focus + .formulario__label{
-    margin-top: -120px;
-}*/
+.form-control::placeholder {
+    color: #ffffff;
+    opacity: 1;
+}
 
-.formulario__label {
+.formulario_label {
     padding-left: 5px;
     color: rgba(0, 0, 0, 0.7);
     margin: 2px;
 }
 
-.formulario__submit {
+.btn-whatsApp {
     background: #1ebea5;
     color: white;
     padding: 10px 20px;
@@ -117,23 +167,53 @@ select {
     border: none;
     border-radius: 5px;
     display: block;
-    width: 50%;
+    width: 55%;
     font-size: 1em;
 }
 
-.formulario__submit:hover {
+.btn-whatsApp:hover {
     background: #5c5c5c;
     color: rgb(223, 223, 223);
 }
 
-/*Centrar los campos del formulario (Los input y el boton de Enviar al WhatsApp, que tambien es un input)*/
-
-.formulario__input,
-.formulario__submit {
+.formulario_input,
+.btn-whatsApp {
     margin-left: auto;
     margin-right: auto;
 }
 
-/*.fijar {
-    margin-top: -120px;
-} */
+/* movil */
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .content-formulario {
+        margin: 0px;
+    }
+
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .content-formulario {
+        margin: 0px;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .formulario {
+        justify-content: center;
+        align-items: center;
+        display: grid;
+    }
+
+}
