@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Reporte ciudadano LNN</title>
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+</head>
+
+<body class="login-page">
+  <div class="content-formulario">
+    <form action="" class="formulario">
+
+      <div class="seccion-titulo">
+        <div class="formulario_titulo">
+          <img class="img-titulo" src="https://www.lanetanoticias.com/wp-content/uploads/2019/05/logo-lnn-1.jpg" alt="LNN">
+        </div>
+        <h3 class="formulario_subtitulo">Reporte ciudadano</h3>
+        <p class="formulario_parrafo">Llena este pequeño formulario comparte tu reporte ciudadano.</p>
+      </div>
+
+      <div class="input-group mb-3">
+        <input id="ciudad" name="ciudad" type="text" class="form-control" placeholder="¿Cuál es tu ciudad?" required>
+      </div>
+
+      <div class="input-group mb-3">
+        <input id="estado" name="estado" type="text" class="form-control" placeholder="¿Cuál es tu estado?" required>
+      </div>
+
+      <div class="input-group mb-3">
+        <textarea id="denuncia" name="denuncia" class="form-control" placeholder="Escribe tu denuncia..." rows="8"></textarea>
+      </div>
+
+      <div class="btn">
+        <button id="submit" class="btn-whatsApp">Enviar a WhatsApp</button>
+      </div>
+
+    </form>
+    <script src="js/form.js"></script>
+  </div>
+</body>
+
+</html>

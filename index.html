@@ -1,87 +1,76 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX" class="md:h-full">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Reporte ciudadano LNN</title>
-  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.2.0/tailwind.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
 </head>
 
-<body class="login-page">
-  <div class="content-formulario">
-    <form action="" class="formulario">
+<body class="md:h-full flex justify-center items-center bg-gray-200">
+  <div class="container mx-auto my-auto max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+    <form id="form" class="px-8 pt-6 pb-8 mb-4 bg-white shadow-md">
 
-      <div class="seccion-titulo">
-        <div class="formulario_titulo">
-          <img class="img-titulo" src="https://www.lanetanoticias.com/wp-content/uploads/2019/05/logo-lnn-1.jpg" alt="LNN">
+      <div class="mb-4">
+        <div class="w-full flex justify-center items-center">
+          <img class="" src="https://mujermexico.com/wp-content/uploads/2020/01/logo-mujeresmex.png" alt="" srcset="">
         </div>
-        <h3 class="formulario_subtitulo">Reporte ciudadano</h3>
-        <p class="formulario_parrafo">Llena este pequeño formulario comparte tu reporte ciudadano.</p>
+        <div class="mt-2 text-gray-700">
+          <h1 class="text-2xl leading-normal font-medium uppercase">¿Te <strong class="text-purple-800 font-extrabold">despidieron injustificadamente</strong> por la emergencia del <span class="bg-purple-900 text-white font-extrabold inline-block py-0 px-1">COVID-19</span>?</h1>
+        </div>
+        <div class="text-sm pt-4 font-medium text-gray-700 mt-2">
+          <strong class="font-bold">En Mujer México queremos conocer tu historia.</strong> Llena este formulario, deja algún dato de contacto y te buscaremos.
+          <div class="text-xs mt-2">
+            <div class="mb-2">Tus datos serán usados únicamente de forma interna y no se compartirán con terceros.</div>
+            <div class="text-purple-800"><span class="">*</span>Campos obligatorios.</div>
+          </div>
+        </div>
       </div>
 
-      <!-- <div class="input-group mb-3">
-        <label for="nombre" class="formulario_label">¿Cual es tu nombre?</label>
-        <input id="cliente" type="text" class="form-control" placeholder="¿Cuál es tu nombre?" required>
-      </div> -->
-
-
-      <!-- <div class="input-group mb-3">
-        <label for="fecha" class="formulario_label">Indica la fecha de tu reserva</label>
-        <input id="fecha" type="date" class="form-control" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required>
-      </div> -->
-
-      <div class="input-group mb-3">
-        <!-- <label for="nombre" class="formulario_label">¿Cual es tu nombre?</label> -->
-        <input id="ciudad" type="text" class="form-control" placeholder="¿Cuál es tu ciudad?" required>
+      <div class="mb-4">
+        <label class="block mb-2 text-sm font-bold text-gray-700" for="name">
+          Nombre
+        </label>
+        <input class="w-full px-3 py-2 leading-tight border-b-2 border-purple-500 text-purple-800 shadow outline-none appearance-none form-control focus:outline-none" name="name" id="name" type="text" placeholder="Ingresa tu nombre" required>
       </div>
 
-      <div class="input-group mb-3">
-        <!-- <label for="nombre" class="formulario_label">¿Cual es tu nombre?</label> -->
-        <input id="estado" type="text" class="form-control" placeholder="¿Cuál es tu estado?" required>
+      <div class="mb-4">
+        <label class="block mb-2 text-sm font-bold text-gray-700" for="name">
+          Apellidos
+        </label>
+        <input class="w-full px-3 py-2 leading-tight border-b-2 border-purple-500 text-purple-800 shadow outline-none appearance-none form-control focus:outline-none" name="lastname" id="lastname" type="text" placeholder="Ingresa tus apellidos" required>
       </div>
 
-      <!-- <div class="input-group mb-3">
-        <label for="hora" class="formulario_label">Indica la hora de tu reserva</label>
-        <input id="hora" type="time" class="form-control" min="07:00" max="21:00" step="3600" required>
-      </div> -->
-
-      <!-- <div class="input-group mb-3">
-        <label for="barbero" class="formulario_label">Barbero de preferencia</label>
-        <select id="barbero" name="listabarberos" class="form-control">
-          <option value="Barbero Cristóbal">Barbero Cristóbal</option>
-          <option value="Barbero Elis">Barbero Elis</option>
-        </select>
-      </div> -->
-
-      <div class="input-group mb-3">
-        <!-- <label for="servicios" class="formulario_label">¿Cuál es el servicio que se desea realizar?</label> -->
-        <textarea id="denuncia" class="form-control" placeholder="Escribe tu denuncia..." rows="8"></textarea>
+      <div class="mb-4">
+        <label class="block mb-2 text-sm font-bold text-gray-700" for="name">
+          Correo
+        </label>
+        <input class="w-full px-3 py-2 leading-tight border-b-2 border-purple-500 text-purple-800 shadow outline-none appearance-none form-control focus:outline-none" name="email" id="email" type="email" placeholder="Ingresa tu correo" required>
       </div>
 
-      <div class="btn">
-        <button id="submit" class="btn-whatsApp">Enviar a WhatsApp</button>
-      </div>
+      
 
-      <!-- <label for="servicios" class="formulario_label">¿Cuál es el servicio que se desea realizar?</label> -->
-      <!-- <select id="servicio" name="listaservicios" class="form-control">
-        <option>Corte de Cabello - $12.000</option>
-        <option>Afeitado de la Barba - $12.000</option>
-        <option>Peinado para caballero - $12.000</option>
-        <option>Servicio Facial - $12.000</option>
-        <option>Combo 1 Corte+Barba - $20.000</option>
-        <option>Combo 2 Corte+Barba+Peinado - $30.000</option>
-        <option>Combo 3 Corte+Barba+Facial - $30.000</option>
-        <option>Combo 4 Corte+Barba+Peinado+Facial - $40.000</option>
-        <option>Alineacón de cejas con cuchilla - $5.000</option>
-      </select> -->
+      <div class="flex justify-center items-center">
+        <button id="submit" class="w-full px-4 py-2 font-bold text-white bg-green-500 rounded hover:bg-green-700 focus:outline-none focus:shadow-outline" type="submit">
+          <i class="fab fa-whatsapp"></i> Enviar WhatsApp
+        </button>
+      </div>
 
     </form>
-    <script src="js/form.js"></script>
+    <p class="text-xs text-center text-gray-500">
+      Desarrollado por: <b><a target="_blank" href="https://mujermexico.com">Mujer México</a></b>
+    </p>
   </div>
+
+  <script src="https://kit.fontawesome.com/1e268974cb.js" crossorigin="anonymous"></script>
+  <script src="assets/js/helpers.js"></script>
+  <script src="assets/js/whatsapp.js"></script>
 </body>
+
 
 </html>
